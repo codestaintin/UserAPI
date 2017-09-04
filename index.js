@@ -2,11 +2,7 @@ import http from 'http';
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
 import routes from './server/routes';
-
-// Configure dotenv to be able to use .env file
-dotenv.config();
 
 // Setup the express app
 const app = express();
