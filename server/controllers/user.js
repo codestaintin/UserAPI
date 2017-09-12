@@ -2,9 +2,12 @@
 import jwt from 'jsonwebtoken';
 import Validator from 'validatorjs';
 import _ from 'lodash';
+import dotenv from 'dotenv';
 import db from '../models';
 
+dotenv.config();
 
+const secret = process.env.SECRET_TOKEN;
 // Create and validate user with validator js (register)
 const create = (req, res) => {
   const User = db.User;
@@ -30,8 +33,8 @@ const create = (req, res) => {
         User.create(body)
           .then((savedUser) => {
             const data = _.pick(savedUser, ['id', 'fullname', 'email', 'phone']);
-            const myToken = jwt.sign(data, 'secretkey', { expiresIn: 24 * 60 * 60 });
-            return res.status(200).send({ token: myToken, message: 'Registration Succesful' });
+            const myToken = jwt.sign(data, secret, { expiresIn: 24 * 60 * 60 });
+            return res.status(200).send({ token: myToken, message: 'Registration Succesful', data });
           })
           .catch(error => res.status(500).send(error));
       })
@@ -67,7 +70,7 @@ const login = (req, res) => {
         return res.status(400).send({ message: 'Password does not match' });
       }
       const data = _.pick(user, ['id', 'fullname', 'email', 'phone']);
-      const myToken = jwt.sign(data, 'secretkey');
+      const myToken = jwt.sign(data, secret);
       return res.status(200).json({ token: myToken, message: 'Login Successful' });
     })
     .catch(error => res.send(error));

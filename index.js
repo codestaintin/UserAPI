@@ -7,7 +7,6 @@ import routes from './server/routes';
 // Setup the express app
 const app = express();
 
-
 // Port configuration
 const hostname = 'localhost';
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -24,10 +23,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // API routes
-routes(app);
+app.use('/api/v1', routes);
+
 app.get('*', (req, res) => res.status(200).send({
   message: 'Sorry, This endpoint does not exist'
 }));
+
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);

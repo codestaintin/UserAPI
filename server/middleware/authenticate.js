@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/users';
 
-const excluded = ['/login', '/users'];
+// const excluded = ['/login', '/users'];
 
 const authenticate = (req, res, next) => {
   // console.log("url ",req.url);
-  if (excluded.indexOf(req.url) > -1) return next();
+  // if (excluded.indexOf(req.url) > -1) return next();
   const token = req.body.token || req.headers['x-access-token'];
   if (token) {
     jwt.verify(token, 'secretKey', (error, decoded) => {
