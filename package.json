@@ -1,5 +1,5 @@
 {
-  "name": "userapi",
+  "name": "userAPI",
   "version": "1.0.0",
   "description": "A basic User API built with NodeJS, ExpressJS and Sequelize",
   "main": "index.js",
