@@ -25,3 +25,10 @@ This API has just two features used in buidling any application the involves Use
  - Run `sequelize db:migrate` for database migrations
  - Run `sequelize` to have access to all other sequelize commands, e.g `sequelize db:migrate:undo:all` is for undoing       migrations
  - Run `npm start` to start the application.
+
+ # Acknowledgments
+ - [Medium](medium.com) A great and educating blog I learnt a lot from.
+ - [StackOverflow](stackoverflow.com) My run to website in times of error and knowledge test.
+ - [Github](github.com) For making it easy for me to get access to my repositories anywhere, anytime. Thanks!!!!
+ - [BenMalcom](https://github.com/benmalcom) Inspiring dude. Thanks!!!!
+ - [Nondefyde](https://github.com/nondefyde) Inspiring dude. Thanks!!!!
