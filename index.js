@@ -2,10 +2,33 @@ import http from 'http';
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+import swaggerJSDoc from 'swagger-jsdoc';
 import routes from './server/routes';
 
 // Setup the express app
 const app = express();
+
+// SwaggerJSDoc spec
+const swaggerDefinition = {
+  info: {
+    title: 'UserAPI',
+    version: '1.0.0',
+    description: 'A simple User API',
+  },
+  host: 'localhost:3000',
+  basePath: '/api/v1/',
+};
+
+// options for the swagger docs
+const options = {
+  // import swaggerDefinitions
+  swaggerDefinition: { swaggerDefinition },
+  // path to the API docs
+  apis: ['./server/routes/*.js'],
+};
+
+// initialize swagger-jsdoc
+const swaggerSpec = swaggerJSDoc(options);
 
 // Port configuration
 const hostname = 'localhost';
@@ -25,9 +48,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // API routes
 app.use('/api/v1', routes);
 
-app.get('*', (req, res) => res.status(200).send({
+app.get('/api/v1/*', (req, res) => res.status(200).send({
   message: 'Sorry, This endpoint does not exist'
 }));
+
+// serve swagger
+app.get('/swagger', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerSpec);
+});
 
 
 server.listen(port, hostname, () => {
