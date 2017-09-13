@@ -23,12 +23,7 @@ const userModel = (sequelize, DataTypes) => {
       allowNull: false
     }
   });
-  // Associate Methods
-
-  // Instance methods
-  // User.prototype.comparePassword = function (password) {
-  //   return bcrypt.compareSync(password, this.password);
-  // };
+  // Associate Methods and Other class methods
 
   // Instance methods
   User.prototype.comparePassword = (user, password) => {
