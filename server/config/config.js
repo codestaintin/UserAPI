@@ -20,9 +20,9 @@ const config = {
     dialect: 'postgres'
   },
   test: {
-    username: 'postgres',
-    password: 1234,
-    database: 'user-api',
+    username: process.env.TEST_DB_USER,
+    password: process.env.TEST_DB_PASSWORD,
+    database: process.env.TEST_DB_NAME,
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres'
