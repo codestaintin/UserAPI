@@ -1,10 +1,12 @@
 {
-  "name": "userAPI",
+  "name": "userapi",
   "version": "1.0.0",
   "description": "A basic User API built with NodeJS, ExpressJS and Sequelize",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-register",
+    "test:app": "cross-env-shell NODE_ENV=test sequelize db:migrate:undo:all && sequelize db:migrate && nyc --reporter=html --reporter=text mocha server/tests/*.test.js --reporter spec --compilers js:babel-register",
+    "coverage": "nyc report --reporter=text-loov | coveralls",
     "start": "nodemon index --exec babel-node"
   },
   "author": "Isioye Mohammed",

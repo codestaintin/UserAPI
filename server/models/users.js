@@ -36,6 +36,22 @@ const userModel = (sequelize, DataTypes) => {
 
     user.password = hash;
   });
+  User.signUpRules = () => {
+    return {
+      fullname: 'required|min:2',
+      email: 'required|email',
+      phone: 'required|min:6',
+      password: 'required|min:6'
+    };
+  };
+
+  User.signInRules = () => {
+    return {
+      email: 'required',
+      password: 'required'
+    };
+  };
+
   return User;
 };
 
