@@ -12,6 +12,7 @@
   "author": "Isioye Mohammed",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "dotenv": "^4.0.0",
@@ -34,6 +35,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.1",
     "chai-http": "^3.0.0",
+    "cross-env": "^5.0.5",
     "dotenv": "^4.0.0",
     "eslint": "^4.5.0",
     "eslint-config-airbnb-base": "^11.3.2",
