@@ -38,7 +38,7 @@ const userModel = (sequelize, DataTypes) => {
   });
   User.signUpRules = () => {
     return {
-      fullname: 'required|min:2',
+      fullname: 'required|min:4',
       email: 'required|email',
       phone: 'required|min:6',
       password: 'required|min:6'

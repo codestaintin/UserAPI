@@ -61,7 +61,7 @@ const routes = (router) => {
  *       200:
  *         description: login
  */
-  router.route('/user/signin').post(userController.login);
+  router.route('/users/signin').post(userController.login);
 };
 
 export default routes;
