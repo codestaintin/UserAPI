@@ -32,3 +32,4 @@ This API has just two features used in buidling any application the involves Use
  - [Github](github.com) For making it easy for me to get access to my repositories anywhere, anytime. Thanks!!!!
  - [BenMalcom](https://github.com/benmalcom) Inspiring dude. Thanks!!!!
  - [Nondefyde](https://github.com/nondefyde) Inspiring dude. Thanks!!!!
+ - [Scotch](scotch.io) For all the awesome tutorials. Thanks!!!!
