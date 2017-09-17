@@ -14,7 +14,7 @@ This API has just two features used in buidling any application the involves Use
 - [Sequelize](http://docs.sequelizejs.com/) Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 - [PostgreSQL](https://www.postgresql.org/) A powerful, open source object-relational database system.
 - [ESLint](eslint.org) provides a pluggable linting utility for JavaScript.
-- [Mocha](https://mochajs.org/) Mocha is a feature-rich JavaScript test framework running on [NodeJS](nodejs.org/en) for testing
+- [Mocha](https://mochajs.org/) Mocha is a feature-rich JavaScript test framework running on [NodeJS](nodejs.org/en) for testing [Javascript](javascript.com) applications.
 
  
  # Installation
