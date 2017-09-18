@@ -1,11 +1,11 @@
 import chai, { expect } from 'chai';
-import supertest from 'supertest';
+// import supertest from 'supertest';
 import chaiHttp from 'chai-http';
 import server from '../../index';
 
 chai.use(chaiHttp);
 
-const request = supertest(server);
+// const request = supertest(server);
 
 describe('/POST User registration validation Test', () => {
   it('should return \'Password does not match\'', (done) => {

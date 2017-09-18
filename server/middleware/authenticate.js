@@ -1,10 +1,14 @@
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 import User from '../models/users';
+
+dotenv.config();
+const secret = process.env.SECRET_TOKEN;
 
 const authenticate = (req, res, next) => {
   const token = req.body.token || req.headers['x-access-token'];
   if (token) {
-    jwt.verify(token, 'secretKey', (error, decoded) => {
+    jwt.verify(token, secret, (error, decoded) => {
       if (error) {
         return res.status(403).json({ message: 'JWT Verification Error', error });
       }
