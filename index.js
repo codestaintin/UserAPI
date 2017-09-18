@@ -51,7 +51,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // API routes
 app.use('/api/v1', router);
 
-app.get('/api/v1/*', (req, res) => res.status(200).send({
+app.get('/api/v1/*', (req, res) => res.status(404).send({
   message: 'Sorry, This endpoint does not exist'
 }));
 
