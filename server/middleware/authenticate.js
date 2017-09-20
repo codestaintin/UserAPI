@@ -1,9 +1,10 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import User from '../models/users';
+import db from '../models';
 
 dotenv.config();
 const secret = process.env.SECRET_TOKEN;
+const User = db.User;
 
 const authenticate = (req, res, next) => {
   const token = req.body.token || req.headers['x-access-token'];
