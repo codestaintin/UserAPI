@@ -14,6 +14,8 @@ This API has just two features used in buidling any application the involves Use
 - [Sequelize](http://docs.sequelizejs.com/) Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 - [PostgreSQL](https://www.postgresql.org/) A powerful, open source object-relational database system.
 - [ESLint](eslint.org) provides a pluggable linting utility for JavaScript.
+- [Mocha](https://mochajs.org/) Mocha is a feature-rich JavaScript test framework running on [NodeJS](nodejs.org/en) for testing [Javascript](javascript.com) applications.
+
  
  # Installation
  - Install [NodeJS](http://nodejs.org/en) and [PostgreSQL](https://www.postgresql.org/) on your machine
@@ -25,6 +27,7 @@ This API has just two features used in buidling any application the involves Use
  - Run `sequelize db:migrate` for database migrations
  - Run `sequelize` to have access to all other sequelize commands, e.g `sequelize db:migrate:undo:all` is for undoing       migrations
  - Run `npm start` to start the application.
+ - Run `npm test` to run application tests.
 
  # Acknowledgments
  - [Medium](medium.com) A great and educating blog I learnt a lot from.

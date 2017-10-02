@@ -13,7 +13,7 @@ const userController = {
   create(req, res) {
     const User = db.User;
     const body = req.body;
-    const validator = new Validator(body, db.User.signUpRules());
+    const validator = new Validator(body, User.signUpRules());
     if (validator.passes()) {
       if (body.verify_password !== body.password) {
         return res.status(401).json({ message: 'Password does not match' });
@@ -43,7 +43,7 @@ const userController = {
   login(req, res) {
     const User = db.User;
     const body = _.pick(req.body, ['email', 'password']);
-    const validator = new Validator(body, db.User.signInRules());
+    const validator = new Validator(body, User.signInRules());
     if (validator.fails()) {
       return res.status(401).json({ message: validator.errors.all() });
     }

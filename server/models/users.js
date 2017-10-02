@@ -40,7 +40,7 @@ const userModel = (sequelize, DataTypes) => {
     return {
       fullname: 'required|min:4',
       email: 'required|email',
-      phone: 'required|min:6',
+      phone: 'required|min:11|max:14',
       password: 'required|min:6'
     };
   };
