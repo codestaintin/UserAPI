@@ -30,6 +30,4 @@ This API has just two features used in buidling any application the involves Use
  - [Medium](medium.com) A great and educating blog I learnt a lot from.
  - [StackOverflow](stackoverflow.com) My run to website in times of error and knowledge test.
  - [Github](github.com) For making it easy for me to get access to my repositories anywhere, anytime. Thanks!!!!
- - [BenMalcom](https://github.com/benmalcom) Inspiring dude. Thanks!!!!
- - [Nondefyde](https://github.com/nondefyde) Inspiring dude. Thanks!!!!
  - [Scotch](scotch.io) For all the awesome tutorials. Thanks!!!!
