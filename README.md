@@ -19,7 +19,7 @@ This API has just two features used in buidling any application the involves Use
  
  # Installation
  - Install [NodeJS](http://nodejs.org/en) and [PostgreSQL](https://www.postgresql.org/) on your machine
- - Clone the repository `https://github.com/codestaintin/UserAPI.git`
+ - Clone the repository by running  `git clone https://github.com/codestaintin/UserAPI.git`
  - Change to working directory to UserAPI `cd /UserAPI`
  - Run `npm install` to install all dependencies
  - It is advisable to install sequelize CLI globally to ease database migrations `npm install -g sequelize-cli`
@@ -33,5 +33,4 @@ This API has just two features used in buidling any application the involves Use
  - [Medium](medium.com) A great and educating blog I learnt a lot from.
  - [StackOverflow](stackoverflow.com) My run to website in times of error and knowledge test.
  - [Github](github.com) For making it easy for me to get access to my repositories anywhere, anytime. Thanks!!!!
- - [Scotch](scotch.io) For all the awesome tutorials. Thanks!!!!
  - [Scotch](scotch.io) For all the awesome tutorials. Thanks!!!!
