@@ -63,7 +63,10 @@ const userController = {
         const myToken = jwt.sign(data, secret);
         return res.status(200).json({ token: myToken, message: 'Login Successful' });
       })
-      .catch(error => res.status(400).json(error));
+      .catch(error => {
+        console.error('Login error:', error); // Log the actual error for debugging
+        return res.status(500).json({ message: 'An error occurred during login.', details: error.message });
+      });
   },
 };
 
